@@ -1,0 +1,7 @@
+---
+# handlers file for dynrole
+- name: shell_commands
+  shell: ls /home/ubuntu/
+  register: view
+- debug: 
+    var: view.stdout_lines

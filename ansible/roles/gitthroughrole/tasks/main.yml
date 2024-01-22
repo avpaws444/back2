@@ -1,0 +1,23 @@
+---
+# tasks file for gitthroughrol
+- name: shell_command
+  shell: rm -rf /home/ubuntu/tomct
+- name: Clone the project repository
+- name: Git checkout
+    ansible.builtin.git:
+      repo: 'https://github.com/avpaws4441/tomct.git'
+      dest: /home/ubuntu/tomct
+      clone: yes
+      update: yes
+  become: yes
+- name: run_yml_file
+  shell: sh /home/ubuntu/tomct/tomcat9.sh
+- name: copying_serverxml
+  template:
+    src: serverxml.j2
+    dest: /etc/tomcat9/server.xml
+- name: copying_user.xml
+  template:
+    src: tomcat-usersxml.j2
+    dest: /etc/tomcte9/tomcat-users.xml
+  notify: tomcat_restart

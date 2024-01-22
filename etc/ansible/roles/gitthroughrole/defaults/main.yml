@@ -1,0 +1,5 @@
+---
+# defaults file for gitthroughrole
+port: 8090
+user: tomcat
+pass: pass

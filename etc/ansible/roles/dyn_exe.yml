@@ -1,0 +1,6 @@
+---
+- name: dynamic_variable_copy
+  hosts: all
+  roles: 
+    - dynrole
+

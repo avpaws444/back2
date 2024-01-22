@@ -1,0 +1,6 @@
+---
+# tasks file for /etc/ansible/roles/pakage_role
+- name: pakcage_installing_role
+  apt:
+    name: git
+    state: latest

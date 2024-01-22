@@ -1,0 +1,6 @@
+---
+# handlers file for gitthroughrole
+
+- name: tomcat_restart
+  become: yes
+  shell: systemctl restart tomcat9

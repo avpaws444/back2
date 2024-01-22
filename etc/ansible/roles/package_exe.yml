@@ -1,0 +1,6 @@
+---
+- name: package_installation_byrole
+  hosts: all
+  roles:
+    - pakage_role
+

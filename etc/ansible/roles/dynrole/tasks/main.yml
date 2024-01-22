@@ -1,0 +1,16 @@
+---
+# tasks file for dynrole
+- name: copy a file
+  copy:
+    src: dyn.txt
+    dest: /home/ubuntu/
+- name: dynamic_copy
+  template: 
+    src: dynamic.j2
+    dest: /home/ubuntu/
+- name: shell_command
+  shell: cat /home/ubuntu/dynamic.j2
+  register: view
+- debug:
+    var: view.stdout_lines 
+  notify: shell_commands

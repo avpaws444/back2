@@ -1,0 +1,11 @@
+---
+# tasks file for copyrole
+- name: copyfile
+  copy:
+    src: abc
+    dest: /home/ubuntu
+- name: shell_commands
+  shell: cat /home/ubuntu/abc
+  register: target_cat
+- debug: 
+    var: target_cat.stdout_lines

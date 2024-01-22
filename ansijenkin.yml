@@ -1,0 +1,13 @@
+---
+- name: Insatalling_jenkins_in_Target_machin
+  hosts: ashok1
+  become: yes
+  tasks:
+  - name: Copying_Script_file_target_machin
+    copy:
+      src: jenkinscript.sh
+      dest: /home/ubuntu
+  - name: Exicuting_Shell_command  
+    shell: sh /home/ubuntu/jenkinscript.sh
+      
+

@@ -1,0 +1,5 @@
+---
+- name: copyting_file_from_roles
+  hosts: all
+  roles: 
+    - copyrole

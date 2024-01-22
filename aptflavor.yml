@@ -1,0 +1,9 @@
+---
+- name: installing_package
+  hosts: all
+  tasks: 
+  - name: package_installation
+    apt: 
+      name: git
+      state: latest
+    when: ansible_os_family == "Redhat"  
